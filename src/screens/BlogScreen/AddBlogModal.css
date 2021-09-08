@@ -1,0 +1,70 @@
+.addBlogModal {
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  right: 25%;
+  bottom: 10%;
+  border: 1px solid #ccc;
+  border-color: #ccc;
+  background: #fff;
+  outline: none;
+  padding: 20px;
+  border-radius: 4px;
+  overflow: auto;
+}
+
+.addBlogModalContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.addBlogModalHeader {
+    width: 100%;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addBlogModalHeader > p {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+}
+
+.addBlogModalInputsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin-top: 25px;
+    padding: 0% 10%;
+}
+
+.addBlogModalInputsContainer > input {
+    width: 100%;
+    height: 40px;
+    padding: 0px 6px
+}
+
+.addBlogModalInputsContainer > textarea {
+    padding: 10px 6px
+}
+
+.addBlogModalInputsContainer > p {
+    font-family: 'Montserrat';
+    margin-top: 15px;
+    margin-bottom: 3px;
+}
+
+.blogFileUpload {
+    margin: 20px 0px;
+}
+
+.addBlogButton {
+    margin-bottom: 40px;
+}

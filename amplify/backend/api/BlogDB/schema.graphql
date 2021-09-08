@@ -1,0 +1,11 @@
+type Blog @model 
+  @key(name: "blogsByDate", fields: ["type", "createdAt"], queryField: "blogsByDate") 
+  @key(name: "fetchBlogByID", fields: ["id"], queryField: "fetchBlogByID") {
+  id: ID!
+  type: String!
+  name: String!
+  content: String!
+  image: String!
+  createdAt: AWSDateTime!
+}
+

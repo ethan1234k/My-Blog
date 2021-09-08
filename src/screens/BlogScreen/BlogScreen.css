@@ -1,0 +1,43 @@
+.blogScreenContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blogScreenBackgroundImage { 
+    width: 100vw;
+    height: 45vh;
+    object-fit: cover;
+}
+
+.blogScreenTitle {
+    margin: 25px 0px;
+    text-align: center;
+}
+
+.blogScreenTitle > h1 {
+    font-family: "Montserrat";
+    color: black;
+    font-size: 36px;
+}
+
+.blogScreenTitle > h2 {
+    font-family: "Montserrat";
+    color: indianred;
+    font-size: 22px;
+}
+
+.blogScreenPageScroll {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 50px;
+}
+
+.blogScreenPageScroll > p {
+    font-family: "Montserrat";
+    font-size: 20px;
+}

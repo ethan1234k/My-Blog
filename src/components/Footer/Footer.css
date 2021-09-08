@@ -1,0 +1,221 @@
+@media screen and (max-width: 600px) {
+  .footerContainer {
+    width: 100%;
+    border-top: 0.5px solid;
+    display: flex;
+    flex-direction: column;
+    height: 290px;
+    padding-top: 35px;
+    padding-bottom: 15px;
+  }
+
+  .footerLogoCenterTextContainer {
+      display: flex;
+      flex-direction: row;
+  }
+
+  .footerLeftContentContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: solid; */
+  }
+
+  .footerLeftContentContainer > img {
+    margin-left: 5vw;
+  }
+
+  .footerLogo {
+    width: 115px;
+    height: 115px;
+  }
+
+  .footerMiddleContentContainer {
+    flex: 1;
+    display: flex;
+    /* padding: 0px 20%; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-left: 0.5px solid;
+  }
+
+  .footerMiddleContentContainer > p {
+    margin: 1% 0px;
+    font-size: 18px;
+    font-family: "Montserrat";
+    margin-right: 5vw;
+  }
+
+  .footerMiddleContentContainer > p:hover {
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .footerRightContentContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0px 20%;
+  }
+
+  .footerRightContentContainer > p {
+    font-size: 18px;
+    font-family: "Montserrat";
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  .footerContainer {
+    width: 100%;
+    /* background-color: cadetblue; */
+    border-top: 0.5px solid;
+    display: flex;
+    flex-direction: row;
+    padding: 45px 0px;
+    height: 240px;
+  }
+
+  .footerLogoCenterTextContainer {
+    flex: 3;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footerLeftContentContainer {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .footerLeftContentContainer > img {
+    margin-right: 5vw;
+  }
+
+  .footerLogo {
+    width: 130px;
+    height: 130px;
+  }
+
+  .footerMiddleContentContainer {
+    flex: 1;
+    display: flex;
+    /* padding-left: 7%; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-left: 0.5px solid;
+    border-right: 0.5px solid;
+  }
+
+  .footerMiddleContentContainer > p {
+    margin: 1% 0px;
+    font-size: 18px;
+    font-family: "Montserrat";
+  }
+
+  .footerMiddleContentContainer > p:hover {
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .footerRightContentContainer {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /* padding-left: 5vw; */
+  }
+
+  .footerRightContentContainer > p {
+    padding-left: 5vw;
+    font-size: 18px;
+    font-family: "Montserrat";
+    padding-right: 25%;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .footerContainer {
+    width: 100%;
+    /* background-color: cadetblue; */
+    border-top: 0.5px solid;
+    display: flex;
+    flex-direction: row;
+    padding: 45px 0px;
+    height: 240px;
+  }
+
+  .footerLogoCenterTextContainer {
+    flex: 3;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footerLeftContentContainer {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .footerLeftContentContainer > img {
+    margin-right: 5vw;
+  }
+
+  .footerLogo {
+    width: 130px;
+    height: 130px;
+  }
+
+  .footerMiddleContentContainer {
+    flex: 1;
+    display: flex;
+    /* padding-left: 7%; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-left: 0.5px solid;
+    border-right: 0.5px solid;
+  }
+
+  .footerMiddleContentContainer > p {
+    margin: 1% 0px;
+    font-size: 18px;
+    font-family: "Montserrat";
+  }
+
+  .footerMiddleContentContainer > p:hover {
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .footerRightContentContainer {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /* padding-left: 5vw; */
+  }
+
+  .footerRightContentContainer > p {
+    padding-left: 5vw;
+    font-size: 18px;
+    font-family: "Montserrat";
+    padding-right: 55%;
+    font-weight: bold;
+  }
+}

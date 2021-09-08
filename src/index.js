@@ -7,6 +7,11 @@ import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
 
+import Amplify from 'aws-amplify';
+import config from './aws-exports';
+
+Amplify.configure(config);
+
 const thisStore = createStore(store)
 ReactDOM.render(
   <React.StrictMode>

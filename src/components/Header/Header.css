@@ -1,0 +1,121 @@
+.headerContainer {
+  width: 100vw;
+  padding: 0px 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 140px;
+  align-items: center;
+  background: white;
+  opacity: 1;
+  outline: none;
+}
+
+.headerLeftLogoContainer > h1 {
+  font-family: "Montserrat";
+  font-size: 18px;
+}
+
+.headerRightTabsContainer {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: center;
+}
+
+.headerRightTabsContainer > p {
+  font-family: "Montserrat";
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.headerRightTabsContainer > p:hover {
+  font-size: 20px;
+}
+
+.headerButton {
+  background-color: #3eb489;
+  width: 200px;
+  height: 48px;
+  border-radius: 12px;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "DM Sans", sans-serif;
+  margin-left: 35px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.headerButton:hover {
+  cursor: pointer;
+  background-color: #22d694;
+  color: #000;
+  transition: 0.5s ease-in-out;
+}
+
+.headerMenuIcon {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .headerMenuIcon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    margin-top: 35px;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+  }
+
+  .headerRightTabsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh - 80px;
+    position: absolute;
+    top: 139px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    background: #3eb489;
+    outline: none;
+  }
+
+  .headerRightTabsContainer > p {
+    font-family: "Montserrat";
+    padding-bottom: 20px;
+    padding-top: 20px;
+    cursor: pointer;
+    font-size: 21px;
+    font-weight: bold;
+    padding-left: 0px;
+  }
+
+  .headerRightTabsContainer > p:hover {
+    font-size: 23px;
+  }
+
+  .headerButton {
+    margin-left: 0px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .headerRightTabsContainer.active {
+    background: white;
+    left: 0;
+    opacity: 1;
+    transition: all 0.6s ease;
+    z-index: 1;
+    outline: none;
+  }
+}

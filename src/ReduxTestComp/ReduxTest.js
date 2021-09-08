@@ -1,65 +1,56 @@
-import React, { Component, useState, useEffect } from "react";
-import { connect } from "react-redux";
+import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-
-// class ReduxTest extends Component {
-//     // const [testNum, setTestNum] = useState(this.props.testNum);
-//     render() {
-//         return (
-//             <div>
-//                 <h1>HELLO</h1>
-//                 <button onClick={() => this.props.addToTestNum()}>Add</button>
-//                 <p>{this.props.testNum}</p>
-//                 <button onClick={() => this.props.subtractFromTestNum()}>Subtract</button>
-//             </div>
-//         )
-//     }
-
-// };
-
-// const mapStateToProps = (state) => {
-//     return {
-//         testNum: state.testNum,
-//     };
-// }
-
-// const mapDispatchToProps = (dispatch) => {
-//     return {
-//         addToTestNum: () => dispatch({ type: "Add"}),
-//         subtractFromTestNum: () => dispatch({ type: "Subtract"})
-//     }
-// }
-
-// export default connect(mapStateToProps, mapDispatchToProps)(ReduxTest)
+import { API } from "aws-amplify";
+import { listBlogs } from "../graphql/queries";
+import { createBlog } from "../graphql/mutations";
 
 const ReduxTest = () => {
   const state = useSelector((state) => state);
   const dispatch = useDispatch();
-  // const [testNum, setTestNum] = useState(state.testNum);
-  // const [message, setMessage] = useState(state.welcomeMessage);
+  const [blogs, setBlogs] = useState([]);
 
-  // useEffect(() => {
-  //   setTestNum(state.testNum);
-  // }, [state.testNum]);
+  useEffect(() => {
+    fetchBlogs();
+  }, []);
 
-  // useEffect(() => {
-  //   setMessage(state.welcomeMessage);
-  // }, [state.welcomeMessage]);
+  async function fetchBlogs() {
+    const apiData = await API.graphql({ query: listBlogs });
+    setBlogs(apiData.data.listBlogs.items);
+    console.log(apiData.data.listBlogs.items);
+  }
+
+  const blogExample = { name: "Testing", content: "Hello World" };
+
+  const addListingItem = async () => {
+    await API.graphql({ query: createBlog, variables: { input: blogExample } })
+      .then(() => console.log("Worked?"))
+      .catch((e) => {
+        console.log(e);
+      });
+  };
 
   return (
     <div>
-      <button onClick={() => dispatch({ type: "Add Listing" })}>Add Listing</button>
-      <button onClick={() => dispatch({ type: "Delete Listing" })}>Delete Listing</button>
-
-
-
-
-      {/* <h1>HELLO</h1>
-      <button onClick={() => dispatch({ type: "Add" })}>Add</button>
-      <p>{testNum}</p>
-      <button onClick={() => dispatch({ type: "Subtract" })}>Subtract</button>
-      <p>{message}</p>
-      <button onClick={() => dispatch({ type: "Change Message" })}>Change Message</button> */}
+      <button
+        onClick={() => {
+          dispatch({ type: "Add Listing" });
+          addListingItem();
+        }}
+      >
+        Add Listing
+      </button>
+      <button onClick={() => dispatch({ type: "Delete Listing" })}>
+        Delete Listing
+      </button>
+      <div>
+        {blogs.map((blog) => (
+          <div>
+            <p>{blog.id}</p>
+            <p>{blog.name}</p>
+            <p>{blog.content}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

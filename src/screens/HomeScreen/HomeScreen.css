@@ -1,0 +1,545 @@
+@media screen and (max-width: 600px) {
+  .homeMainBackgroundImage {
+    background-image: url("./food-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 80vh;
+    /* margin-top: -580px; */
+  }
+
+  .homeMainContentContainer {
+    position: absolute;
+    height: 60vh;
+    width: 100vw;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .homeMainContentContainer > h1 {
+    padding: 10px 20px;
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: grey;
+    background-color: whitesmoke;
+    font-family: "Montserrat";
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .homeMainContentContainer > h2 {
+    padding: 10px 20px;
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    color: indianred;
+    font-family: "Montserrat";
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .homeFeedContent {
+    padding: 50px 20px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .homeFeedContent > h1 {
+    color: black;
+    font-family: "Montserrat";
+    font-size: 32px;
+  }
+
+  .homeFeedAboutSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18vh;
+  }
+
+  .homeFeedAboutLeftContent {
+    width: 98%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+  }
+
+  .homeFeedAboutLeftContent > h1 {
+    color: black;
+    font-family: "Montserrat";
+    margin-bottom: 25px;
+    font-size: 24px;
+  }
+
+  .homeFeedAboutLeftContent > p {
+    color: black;
+    font-family: "Montserrat";
+    margin-bottom: 15px;
+  }
+
+  .homeFeedAboutRightContent {
+    padding: 1% 0%;
+    width: 45%;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .homeFeedAboutRightContent > img {
+    width: 90%;
+    /* width: 100%; */
+  }
+
+  .homeFeedAboutRightContent > h1 {
+    color: black;
+    font-family: "Montserrat";
+  }
+
+  .homeFeedAboutRightContent > p {
+    color: black;
+    font-family: "Montserrat";
+  }
+
+  .homeFeedContent > h2 {
+    color: black;
+    font-family: "Montserrat";
+    font-size: 32px;
+    margin-top: 10vh;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  .homeMainBackgroundImage {
+    background-image: url("./food-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 80vh;
+    /* margin-top: -580px; */
+  }
+
+  .homeMainContentContainer {
+    position: absolute;
+    height: 50vh;
+    width: 100vw;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .homeMainContentContainer > h1 {
+    padding: 10px 20px;
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: grey;
+    background-color: whitesmoke;
+    font-family: "Montserrat";
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .homeMainContentContainer > h2 {
+    padding: 10px 20px;
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    color: indianred;
+    font-family: "Montserrat";
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .homeFeedContent {
+    padding: 50px 20px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .homeFeedContent > h1 {
+    color: black;
+    font-family: "Montserrat";
+    font-size: 32px;
+  }
+
+  .homeFeedAboutSection {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15vh;
+  }
+
+  .homeFeedAboutLeftContent {
+    width: 50%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .homeFeedAboutLeftContent > h1 {
+    color: black;
+    font-family: "Montserrat";
+    margin-bottom: 20px;
+  }
+
+  .homeFeedAboutLeftContent > p {
+    color: black;
+    font-family: "Montserrat";
+    margin-bottom: 12px;
+  }
+
+  .homeFeedAboutRightContent {
+    padding: 1% 0%;
+    width: 45%;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .homeFeedAboutRightContent > img {
+    width: 90%;
+    /* width: 100%; */
+  }
+
+  .homeFeedAboutRightContent > h1 {
+    color: black;
+    font-family: "Montserrat";
+  }
+
+  .homeFeedAboutRightContent > p {
+    color: black;
+    font-family: "Montserrat";
+  }
+
+  .homeFeedContent > h2 {
+    color: black;
+    font-family: "Montserrat";
+    font-size: 32px;
+    margin-top: 10vh;
+  }
+}
+
+@media screen and (max-width: 1300px) and (min-width: 900px) {
+  .homeMainBackgroundImage {
+    background-image: url("./food-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 80vh;
+    /* margin-top: -580px; */
+  }
+
+  .homeMainContentContainer {
+    position: absolute;
+    height: 50vh;
+    width: 100vw;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .homeMainContentContainer > h1 {
+    padding: 10px 20px;
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: grey;
+    background-color: whitesmoke;
+    font-family: "Montserrat";
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .homeMainContentContainer > h2 {
+    padding: 10px 20px;
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    color: indianred;
+    font-family: "Montserrat";
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .homeFeedContent {
+    padding: 50px 20px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .homeFeedContent > h1 {
+    color: black;
+    font-family: "Montserrat";
+    font-size: 32px;
+  }
+
+  .homeFeedAboutSection {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15vh;
+  }
+
+  .homeFeedAboutLeftContent {
+    width: 35%;
+    margin-left: 15%;
+    height: 55vh;
+    padding: 1.5% 2.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: darkslategray;
+    text-align: left;
+  }
+
+  .homeFeedAboutLeftContent > h1 {
+    color: white;
+    font-family: "Montserrat";
+    margin-bottom: 20px;
+  }
+
+  .homeFeedAboutLeftContent > p {
+    color: white;
+    font-family: "Montserrat";
+    margin-bottom: 12px;
+  }
+
+  .homeFeedAboutRightContent {
+    width: 35%;
+    margin-right: 15%;
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .homeFeedAboutRightContent > img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+  }
+
+  .homeFeedAboutRightContent > h1 {
+    color: black;
+    font-family: "Montserrat";
+  }
+
+  .homeFeedAboutRightContent > p {
+    color: black;
+    font-family: "Montserrat";
+  }
+
+  .homeFeedContent > h2 {
+    color: black;
+    font-family: "Montserrat";
+    font-size: 32px;
+    margin-top: 10vh;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .homeMainBackgroundImage {
+    background-image: url("./food-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 130vh;
+    margin-top: -580px;
+  }
+
+  .homeMainContentContainer {
+    position: absolute;
+    height: 50vh;
+    width: 100vw;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .homeMainContentContainer > h1 {
+    padding: 10px 20px;
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: grey;
+    background-color: whitesmoke;
+    font-family: "Montserrat";
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .homeMainContentContainer > h2 {
+    padding: 10px 20px;
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    color: indianred;
+    font-family: "Montserrat";
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .homeFeedContent {
+    padding: 50px 20px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .homeFeedContent > h1 {
+    color: black;
+    font-family: "Montserrat";
+    font-size: 32px;
+  }
+
+  .homeFeedAboutSection {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15vh;
+  }
+
+  .homeFeedAboutLeftContent {
+    width: 26%;
+    margin-left: 24%;
+    height: 55vh;
+    padding: 1.5% 2.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: darkslategray;
+    text-align: left;
+  }
+
+  .homeFeedAboutLeftContent > h1 {
+    color: white;
+    font-family: "Montserrat";
+    margin-bottom: 20px;
+  }
+
+  .homeFeedAboutLeftContent > p {
+    color: white;
+    font-family: "Montserrat";
+    margin-bottom: 12px;
+  }
+
+  .homeFeedAboutRightContent {
+    width: 26%;
+    margin-right: 24%;
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .homeFeedAboutRightContent > img {
+    height: 90%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .homeFeedAboutRightContent > h1 {
+    color: black;
+    font-family: "Montserrat";
+  }
+
+  .homeFeedAboutRightContent > p {
+    color: black;
+    font-family: "Montserrat";
+  }
+
+  .homeFeedContent > h2 {
+    color: black;
+    font-family: "Montserrat";
+    font-size: 32px;
+    margin-top: 10vh;
+  }
+
+  .homeFeedContent > p {
+    color: indianred;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: "Montserrat";
+    margin-top: 5px;
+  }
+
+  .homeFeedBlogSection {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10vh;
+    margin-bottom: 15vh;
+  }
+
+  .readMoreBlogComponent {
+    padding: 20px;
+    width: 25vw;
+    height: 20vw;
+    border: 1px solid transparent;
+    box-shadow: 0 4px 8px 0 rgba(66, 65, 65, 0.203),
+      0 6px 20px 0 rgba(161, 155, 155, 0.59);
+    transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    /* margin: 20px 10%; */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
