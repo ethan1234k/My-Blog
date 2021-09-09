@@ -9,6 +9,7 @@ export const createBlog = /* GraphQL */ `
     createBlog(input: $input, condition: $condition) {
       id
       type
+      category
       name
       content
       image
@@ -25,6 +26,7 @@ export const updateBlog = /* GraphQL */ `
     updateBlog(input: $input, condition: $condition) {
       id
       type
+      category
       name
       content
       image
@@ -41,6 +43,7 @@ export const deleteBlog = /* GraphQL */ `
     deleteBlog(input: $input, condition: $condition) {
       id
       type
+      category
       name
       content
       image

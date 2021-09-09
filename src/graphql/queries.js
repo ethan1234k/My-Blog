@@ -6,6 +6,7 @@ export const getBlog = /* GraphQL */ `
     getBlog(id: $id) {
       id
       type
+      category
       name
       content
       image
@@ -24,6 +25,7 @@ export const listBlogs = /* GraphQL */ `
       items {
         id
         type
+        category
         name
         content
         image
@@ -54,6 +56,7 @@ export const blogsByDate = /* GraphQL */ `
       items {
         id
         type
+        category
         name
         content
         image
@@ -82,6 +85,7 @@ export const fetchBlogByID = /* GraphQL */ `
       items {
         id
         type
+        category
         name
         content
         image

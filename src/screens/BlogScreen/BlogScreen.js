@@ -4,7 +4,6 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { useSelector } from "react-redux";
 import BlogDisplayRow from "../../components/BlogDisplayRow/BlogDisplayRow";
-import AddBlogModal from "./AddBlogModal";
 import WhaleBackground from "./WhaleBackground.jpg";
 import { API } from "aws-amplify";
 import { listBlogsWithThumbnailContentOnly } from "../../graphql/custom-queries";
@@ -14,9 +13,6 @@ const BlogScreen = () => {
   const state = useSelector((state) => state);
   const [blogs, setBlogs] = useState([]);
   const [blogDisplay2DArray, setBlogDisplay2DArray] = useState([]);
-  //Variables for the add blog modal
-  const [addBlogModalOpen, setAddBlogModalOpen] = useState(false);
-  const [addBlogModalRefresh, setAddBlogModalRefresh] = useState(false);
 
   useEffect(() => {
     fetchBlogs();
@@ -63,17 +59,7 @@ const BlogScreen = () => {
 
   return (
     <div className="blogScreenContainer">
-      <AddBlogModal open={addBlogModalOpen} refresh={addBlogModalRefresh} />
       <Header />
-      <button
-        onClick={() => {
-          // dispatch({ type: "Set Blog Array" , array: "Testing Title" });
-          setAddBlogModalOpen(true);
-          setAddBlogModalRefresh(!addBlogModalRefresh);
-        }}
-      >
-        Add Listing
-      </button>
       <img src={WhaleBackground} className="blogScreenBackgroundImage" />
       <div className="blogScreenTitle">
         <h1>College, Computers, and Chow Blog</h1>

@@ -6,6 +6,7 @@ export const onCreateBlog = /* GraphQL */ `
     onCreateBlog {
       id
       type
+      category
       name
       content
       image
@@ -19,6 +20,7 @@ export const onUpdateBlog = /* GraphQL */ `
     onUpdateBlog {
       id
       type
+      category
       name
       content
       image
@@ -32,6 +34,7 @@ export const onDeleteBlog = /* GraphQL */ `
     onDeleteBlog {
       id
       type
+      category
       name
       content
       image

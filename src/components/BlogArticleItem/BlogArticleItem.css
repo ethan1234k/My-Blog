@@ -1,10 +1,123 @@
-.blogArticleMainImage {
+@media screen and (max-width: 600px) {
+  .blogArticleMainImage {
+    width: 100vw;
+    height: 43vh;
+    object-fit: cover;
+    margin-bottom: 30px;
+  }
+
+  .blogArticleHtmlContentContainer {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 10%;
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
+
+  .blogArticleHtmlContentContainer > p1 {
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-family: "Lato";
+  }
+
+  .blogArticleHtmlContentContainer > h2 {
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-family: "Lato";
+  }
+
+  .blogArticleHtmlContentContainer > p2 {
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-family: "Lato";
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  .blogArticleMainImage {
+    width: 100vw;
+    height: 50vh;
+    object-fit: cover;
+    margin-bottom: 30px;
+  }
+
+  .blogArticleHtmlContentContainer {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 10%;
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
+
+  .blogArticleHtmlContentContainer > p1 {
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-family: "Lato";
+  }
+
+  .blogArticleHtmlContentContainer > h2 {
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-family: "Lato";
+  }
+
+  .blogArticleHtmlContentContainer > p2 {
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-family: "Lato";
+  }
+}
+
+@media screen and (max-width: 1300px) and (min-width: 900px) {
+  .blogArticleMainImage {
+    width: 100vw;
+    height: 56vh;
+    object-fit: cover;
+    margin-bottom: 30px;
+  }
+
+  .blogArticleHtmlContentContainer {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 15%;
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
+
+  .blogArticleHtmlContentContainer > p1 {
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-family: "Lato";
+  }
+
+  .blogArticleHtmlContentContainer > h2 {
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-family: "Lato";
+  }
+
+  .blogArticleHtmlContentContainer > p2 {
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-family: "Lato";
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .blogArticleMainImage {
     width: 100vw;
     height: 60vh;
     object-fit: cover;
-}
+    margin-bottom: 30px;
+  }
 
-.blogArticleHtmlContentContainer {
+  .blogArticleHtmlContentContainer {
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -12,4 +125,27 @@
     padding: 0px 25%;
     padding-top: 20px;
     padding-bottom: 60px;
+  }
+
+  .blogArticleHtmlContentContainer > p1 {
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-family: "Lato";
+  }
+
+  .blogArticleHtmlContentContainer > h2 {
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-family: "Lato";
+  }
+
+  .blogArticleHtmlContentContainer > p2 {
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-family: "Lato";
+  }
+}
+
+.blogArticleHtmlContentContainer > h1 {
+  text-align: center;
 }

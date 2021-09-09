@@ -1,32 +1,32 @@
 import React, { useEffect, useState } from "react";
 import "./BlogThumbnail.css";
 import { useDispatch } from "react-redux";
-import { API, Storage } from "aws-amplify";
-import { deleteBlog } from "../../graphql/mutations";
+import { Storage } from "aws-amplify";
+import { useHistory } from "react-router";
 
 const BlogThumbnail = (props) => {
-  const dispatch = useDispatch();
+  let history = useHistory();
   let id = props.id;
   let name = props.name;
-  let content = props.content;
+  let category = props.category;
   const [image, setImage] = useState(props.image);
   let createdAt = props.createdAt;
-  const [dateToDisplay, setDateToDisplay] = useState("")
+  const [dateToDisplay, setDateToDisplay] = useState("");
 
   useEffect(() => {
     renderImage();
     try {
-        determineDisplayDate(createdAt.substring(0, 10));
+      determineDisplayDate(createdAt);
     } catch (e) {
-        console.log(e)
+      console.log(e);
     }
   }, []);
 
   useEffect(() => {
     try {
-        determineDisplayDate(createdAt.substring(0, 10));
+      determineDisplayDate(createdAt);
     } catch (e) {
-        console.log(e)
+      console.log(e);
     }
   }, [props.createdAt]);
 
@@ -37,20 +37,15 @@ const BlogThumbnail = (props) => {
     }
   };
 
-  const determineDisplayDate = (MYDString) => {
-    let year = MYDString.substring(0, 4);
-    let monthNum = MYDString.substring(5, 7);
-    let monthName = getMonthName(monthNum)
-
-    let day = MYDString.substring(8, 10);
-    if (day.charAt(0) === '0') {
-        day = day.substring(1)
-    }
+  const determineDisplayDate = (createdAt) => {
+    let blogCreatedDate = new Date(createdAt);
+    let year = blogCreatedDate.getFullYear();
+    let monthName = getMonthName(blogCreatedDate.getMonth());
+    let day = blogCreatedDate.getDate();
     setDateToDisplay(monthName + " " + day + ", " + year);
   };
 
   function getMonthName(monthIndex) {
-    monthIndex = parseInt(monthIndex, 10) - 1
     const monthNames = [
       "January",
       "February",
@@ -65,21 +60,33 @@ const BlogThumbnail = (props) => {
       "November",
       "December",
     ];
-    return (monthNames[monthIndex])
+    return monthNames[monthIndex];
+  }
+
+  //Button to delete blog
+  {
+    /* <h1 onClick={async () => {
+      dispatch({ type: "Delete Blog Item", id: id})
+      await API.graphql({ query: deleteBlog, variables: { input: { id } } })
+    }}>DELETE</h1> */
   }
 
   return (
-    <div className="blogItemContainer" key={id}>
-      <img src={image} alt="Can't load image" className="blogItemImage" />
-      {/* <h1 onClick={async () => {
-                dispatch({ type: "Delete Blog Item", id: id})
-                await API.graphql({ query: deleteBlog, variables: { input: { id } } })
-            }}>DELETE</h1> */}
+    <div
+      className="blogItemContainer"
+      key={id}
+      onClick={() => {
+        history.push(`/blog/article/${id}`);
+        window.scroll(0, 0);
+      }}
+    >
+      <img src={image} alt="Blog Main Image" className="blogItemImage" />
       <div className="blogItemTextContainer">
         <h1>{name}</h1>
-        <p>{dateToDisplay}</p>
+        <p>
+          {dateToDisplay} - {category}
+        </p>
       </div>
-      {/* <p>{content}</p> */}
     </div>
   );
 };

@@ -20,7 +20,6 @@ const Footer = () => {
           >
             Home
           </p>
-          <p>About</p>
           <p
             onClick={() => {
               history.push("/blog");
@@ -29,7 +28,6 @@ const Footer = () => {
           >
             Blog
           </p>
-          <p>Support</p>
         </div>
       </div>
       <div className="footerRightContentContainer">

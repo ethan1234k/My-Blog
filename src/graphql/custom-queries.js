@@ -18,6 +18,7 @@ export const listBlogsWithThumbnailContentOnly = /* GraphQL */ `
       items {
         id
         name
+        category
         image
         createdAt
       }

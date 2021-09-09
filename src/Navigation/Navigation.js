@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import BlogScreen from '../screens/BlogScreen/BlogScreen';
 import HomeScreen from '../screens/HomeScreen/HomeScreen';
+import SingleArticleScreen from '../screens/SingleArticleScreen/SingleArticleScreen';
+import NewBlogScreen from '../screens/NewBlogScreen/NewBlogScreen';
+import ContactUsScreen from '../screens/ContactUsScreen/ContactUsScreen';
 
 const Navigation = () => {
   return (
@@ -10,8 +13,17 @@ const Navigation = () => {
       <Route exact path="/">
         <HomeScreen />
       </Route>
-      <Route path="/blog">
+      <Route  exact path="/blog">
         <BlogScreen />
+      </Route>
+      <Route  exact path="/contact">
+        <ContactUsScreen />
+      </Route>
+      <Route path="/blog/article/">
+        <SingleArticleScreen />
+      </Route>
+      <Route exact path="/add-blog/t15oiBpw097KtQa/26kAggM">
+        <NewBlogScreen />
       </Route>
       {/* <Route exact path="/">
         <LandingPage />

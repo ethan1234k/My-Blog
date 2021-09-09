@@ -12,7 +12,9 @@ const AddBlogModal = (props) => {
   const [addBlogModalOpen, setAddBlogModalOpen] = useState(props.open);
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const [category, setCategory] = useState("")
   const [mediaFile, setMediaFile] = useState();
+
 
   useEffect(() => {
     setAddBlogModalOpen(props.open);
@@ -33,6 +35,7 @@ const AddBlogModal = (props) => {
       id: new Date().getTime(),
       type: "Blog",
       name: title,
+      category: category,
       content: content,
       image: mediaFile.name,
     };
@@ -65,6 +68,8 @@ const AddBlogModal = (props) => {
         <div className="addBlogModalInputsContainer">
           <p>Title</p>
           <input onChange={(text) => setTitle(text.target.value)} />
+          <p>Category</p>
+          <input onChange={(text) => setCategory(text.target.value)} />
           <p>Content</p>
           <textarea
             rows={35}
@@ -76,11 +81,6 @@ const AddBlogModal = (props) => {
             accept="image/*"
             onChange={(e) => handleFileUpload(e)}
           />
-          {/* <img
-            src={mediaFile}
-            alt={"No Image"}
-            className="displayImageUploaded"
-          /> */}
           <button
             className="addBlogButton"
             onClick={async () => {

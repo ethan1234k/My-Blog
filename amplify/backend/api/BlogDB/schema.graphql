@@ -3,6 +3,7 @@ type Blog @model
   @key(name: "fetchBlogByID", fields: ["id"], queryField: "fetchBlogByID") {
   id: ID!
   type: String!
+  category: String!
   name: String!
   content: String!
   image: String!

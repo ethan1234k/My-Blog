@@ -26,7 +26,7 @@ const HomeScreen = () => {
       query: listBlogsWithThumbnailContentOnly,
       variables: { type: "Blog", limit: 2, sortDirection: "ASC" },
     }).catch((e) => console.log(e));
-    let latestTwoBlogsArray = apiData.data.blogsByDate.items;
+    let latestTwoBlogsArray = apiData.data.blogsByDate.items.reverse();
     setLatestBlog(latestTwoBlogsArray[0]);
     setSecondLatestBlog(latestTwoBlogsArray[1]);
     if (
@@ -102,7 +102,7 @@ const HomeScreen = () => {
                 key={latestBlog.id}
                 id={latestBlog.id}
                 name={latestBlog.name}
-                content={latestBlog.content}
+                category={latestBlog.category}
                 image={latestBlog.image}
                 createdAt={latestBlog.createdAt}
               />
@@ -116,7 +116,7 @@ const HomeScreen = () => {
                 key={secondLatestBlog.id}
                 id={secondLatestBlog.id}
                 name={secondLatestBlog.name}
-                content={secondLatestBlog.content}
+                category={secondLatestBlog.category}
                 image={secondLatestBlog.image}
                 createdAt={secondLatestBlog.createdAt}
               />
@@ -124,7 +124,6 @@ const HomeScreen = () => {
               <h1>Loading</h1>
             )}
           </div>
-          {/* <div className="readMoreBlogComponent">Read All the Blogs here</div> */}
         </div>
       </div>
       <Footer />

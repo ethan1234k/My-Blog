@@ -12,7 +12,7 @@ const BlogDisplayRow = (props) => {
             key={blog.id}
             id={blog.id}
             name={blog.name}
-            content={blog.content}
+            category={blog.category}
             image={blog.image}
             createdAt={blog.createdAt}
           />

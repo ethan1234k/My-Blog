@@ -1,33 +1,35 @@
-.blogScreenContainer {
+@media screen and (max-width: 900px) {
+  .blogScreenContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+  }
 
-.blogScreenBackgroundImage { 
+  .blogScreenBackgroundImage {
     width: 100vw;
     height: 45vh;
     object-fit: cover;
-}
+  }
 
-.blogScreenTitle {
+  .blogScreenTitle {
     margin: 25px 0px;
     text-align: center;
-}
+    padding: 0px 8%;
+  }
 
-.blogScreenTitle > h1 {
+  .blogScreenTitle > h1 {
     font-family: "Montserrat";
     color: black;
-    font-size: 36px;
-}
+    font-size: 30px;
+  }
 
-.blogScreenTitle > h2 {
+  .blogScreenTitle > h2 {
     font-family: "Montserrat";
     color: indianred;
-    font-size: 22px;
-}
+    font-size: 19px;
+  }
 
-.blogScreenPageScroll {
+  .blogScreenPageScroll {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -35,9 +37,56 @@
     justify-content: center;
     padding-top: 25px;
     padding-bottom: 50px;
-}
+  }
 
-.blogScreenPageScroll > p {
+  .blogScreenPageScroll > p {
     font-family: "Montserrat";
     font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .blogScreenContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blogScreenBackgroundImage {
+    width: 100vw;
+    height: 45vh;
+    object-fit: cover;
+  }
+
+  .blogScreenTitle {
+    margin: 25px 0px;
+    text-align: center;
+  }
+
+  .blogScreenTitle > h1 {
+    font-family: "Montserrat";
+    color: black;
+    font-size: 36px;
+  }
+
+  .blogScreenTitle > h2 {
+    font-family: "Montserrat";
+    color: indianred;
+    font-size: 22px;
+  }
+
+  .blogScreenPageScroll {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 50px;
+  }
+
+  .blogScreenPageScroll > p {
+    font-family: "Montserrat";
+    font-size: 20px;
+  }
 }

@@ -28,12 +28,11 @@ const Header = () => {
       </div>
       <div className={click ? 'headerRightTabsContainer active' : 'headerRightTabsContainer'}>
         <p onClick={() => {history.push('/'); window.scrollTo(0, 0)}}>Home</p>
-        <p>About</p>
         <p onClick={() => {history.push('/blog'); window.scrollTo(0, 0)}}>Blog</p>
-        <p>Support</p>
-        <button type="text" className="headerButton">
+        {/* <p onClick={() => {history.push('/contact'); window.scrollTo(0, 0)}}>Contact</p> */}
+        {/* <button type="text" className="headerButton">
           Contact Us
-        </button>
+        </button> */}
       </div>
     </div>
   );
