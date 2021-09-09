@@ -21,7 +21,7 @@ const BlogScreen = () => {
   async function fetchBlogs() {
     const apiData = await API.graphql({
       query: listBlogsWithThumbnailContentOnly,
-      variables: { type: "Blog", sortDirection: "ASC" },
+      variables: { type: "Blog", sortDirection: "DESC" },
     }).catch((e) => console.log(e));
     console.log(apiData.data.blogsByDate.items)
     let tempArray = splitArray(apiData.data.blogsByDate.items, 3);

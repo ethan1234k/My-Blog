@@ -3,19 +3,20 @@ import "./BlogArticleItem.css";
 import { API, Storage } from "aws-amplify";
 import BlossomBackground from "../../screens/BlogScreen/BlossomsBackground.jpg";
 import { useSelector } from "react-redux";
-import { fetchBlogByID } from '../../graphql/queries';
+import { fetchBlogByID } from "../../graphql/queries";
 
 const BlogArticleItem = () => {
   const state = useSelector((state) => state);
   const [blogMainImage, setBlogMainImage] = useState();
   const [testBlog, setTestBlog] = useState();
+  const [dateToDisplay, setDateToDisplay] = useState("")
   const [blogArticleDataFetched, setBlogArticleDataFetched] = useState(false);
-  let URL = window.location.href
-  let blogID = URL.substring(URL.lastIndexOf('/') + 1)
-  let fontFamily = "Lato"
+  let URL = window.location.href;
+  let blogID = URL.substring(URL.lastIndexOf("/") + 1);
+  let fontFamily = "Lato";
 
   useEffect(() => {
-    fetchBlogs()
+    fetchBlogs();
   }, []);
 
   // async function fetchBlogs () {
@@ -25,16 +26,18 @@ const BlogArticleItem = () => {
   //   setBlogArticleDataFetched(true)
   // }
 
-  async function fetchBlogs () {
-    const apiData = await API.graphql({ query: fetchBlogByID, variables: { id: blogID }})
+  async function fetchBlogs() {
+    const apiData = await API.graphql({
+      query: fetchBlogByID,
+      variables: { id: blogID },
+    });
     let blogData = apiData.data.fetchBlogByID.items[0];
-    setTestBlog(blogData)
-    console.log(blogData)
+    setTestBlog(blogData);
     if (blogData) {
-      setBlogArticleDataFetched(true)
+      setBlogArticleDataFetched(true);
+      renderImage(blogData.image);
+      determineDisplayDate(blogData.createdAt)
     }
-    renderImage(blogData.image)
-    let blogCreatedDate = new Date(blogData.createdAt)
   }
 
   const renderImage = async (image) => {
@@ -44,11 +47,44 @@ const BlogArticleItem = () => {
     }
   };
 
+  const determineDisplayDate = (createdAt) => {
+    let blogCreatedDate = new Date(createdAt);
+    let year = blogCreatedDate.getFullYear();
+    let monthName = getMonthName(blogCreatedDate.getMonth());
+    let day = blogCreatedDate.getDate();
+    setDateToDisplay(monthName + " " + day + ", " + year);
+  };
+
+  function getMonthName(monthIndex) {
+    const monthNames = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+    return monthNames[monthIndex];
+  }
+
   return (
     <div>
       <img src={blogMainImage} className="blogArticleMainImage" />
       {blogArticleDataFetched ? (
-        <div dangerouslySetInnerHTML={{ __html: testBlog.content }} className="blogArticleHtmlContentContainer"/>
+        <div className="blogArticleContentContainer">
+          <h1>{testBlog.name}</h1>
+          <p>{dateToDisplay} x {testBlog.category} x Ethan Kam</p>
+          <div
+            dangerouslySetInnerHTML={{ __html: testBlog.content }}
+            className="blogArticleHtmlContentContainer"
+          />
+        </div>
       ) : null}
       {/* <div className="blogArticleHtmlContentContainer">
         <h1 style={{fontSize: 30, fontFamily: fontFamily, alignSelf: 'center'}}>Insert Clever Title Here</h1>

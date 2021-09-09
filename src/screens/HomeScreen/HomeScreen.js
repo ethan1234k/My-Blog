@@ -24,9 +24,9 @@ const HomeScreen = () => {
   async function fetchBlogs() {
     const apiData = await API.graphql({
       query: listBlogsWithThumbnailContentOnly,
-      variables: { type: "Blog", limit: 2, sortDirection: "ASC" },
+      variables: { type: "Blog", limit: 2, sortDirection: "DESC" },
     }).catch((e) => console.log(e));
-    let latestTwoBlogsArray = apiData.data.blogsByDate.items.reverse();
+    let latestTwoBlogsArray = apiData.data.blogsByDate.items;
     setLatestBlog(latestTwoBlogsArray[0]);
     setSecondLatestBlog(latestTwoBlogsArray[1]);
     if (
