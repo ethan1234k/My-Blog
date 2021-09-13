@@ -63,6 +63,18 @@ const BlogThumbnail = (props) => {
     return monthNames[monthIndex];
   }
 
+  //function that removes any special characters from a string
+  function removeSpecialCharacters (title) {
+    title = title.replace(/,/g, '')
+    title = title.replace(/:/g, '')
+    title = title.split('(').join('')
+    title = title.split(')').join('')
+    title = title.split('!').join('')
+    title = title.split('?').join('')
+    title = title.split('.').join('')
+    return title;
+  }
+
   //Button to delete blog
   {
     /* <h1 onClick={async () => {
@@ -76,7 +88,11 @@ const BlogThumbnail = (props) => {
       className="blogItemContainer"
       key={id}
       onClick={() => {
-        history.push(`/blog/article/${id}`);
+        //Removes special characters and spaces from title, then places it in URL
+        let blogTitleWithoutSpecialCharacters = removeSpecialCharacters(name)
+        let urlBlogTitleWithoutSpaces = blogTitleWithoutSpecialCharacters.split(' ').join('-')
+        console.log(urlBlogTitleWithoutSpaces)
+        history.push(`/blog/article/${urlBlogTitleWithoutSpaces}/${id}`);
         window.scroll(0, 0);
       }}
     >
