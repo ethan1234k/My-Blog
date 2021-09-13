@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import BlogDisplayRow from "../../components/BlogDisplayRow/BlogDisplayRow";
 import WhaleBackground from "./WhaleBackground.jpg";
 import { API } from "aws-amplify";
-import { listBlogsWithThumbnailContentOnly } from "../../graphql/custom-queries";
+import { fetchProductionReadyBlogThumbnailContent } from "../../graphql/custom-queries";
 
 
 const BlogScreen = () => {
@@ -20,11 +20,11 @@ const BlogScreen = () => {
 
   async function fetchBlogs() {
     const apiData = await API.graphql({
-      query: listBlogsWithThumbnailContentOnly,
-      variables: { type: "Blog", sortDirection: "DESC" },
+      query: fetchProductionReadyBlogThumbnailContent,
+      variables: { production: "Ready", sortDirection: "DESC" },
     }).catch((e) => console.log(e));
-    console.log(apiData.data.blogsByDate.items)
-    let tempArray = splitArray(apiData.data.blogsByDate.items, 3);
+    console.log(apiData.data.fetchBlogsByProduction.items)
+    let tempArray = splitArray(apiData.data.fetchBlogsByProduction.items, 3);
     setBlogDisplay2DArray(tempArray);
   }
 

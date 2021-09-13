@@ -62,9 +62,20 @@
 }
 
 .blogFileUpload {
-    margin: 20px 0px;
+    margin: 10px 0px;
 }
 
 .addBlogButton {
     margin-bottom: 40px;
+    width: 100%;
+    border: none;
+    background-color: indianred;
+}
+
+.embeddedImagesContainer {
+    border: 0.5px solid black;
+    padding: 20px 10px;
+    border-radius: 4px;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }

@@ -10,7 +10,7 @@ const NewBlogScreen = () => {
   const [addBlogModalRefresh, setAddBlogModalRefresh] = useState(false);
 
   return (
-    <div>
+    <div className="newBlogScreenContainer">
       <Header />
       <button
         className="addBlogButton"

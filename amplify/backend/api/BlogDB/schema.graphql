@@ -1,12 +1,15 @@
 type Blog @model 
   @key(name: "blogsByDate", fields: ["type", "createdAt"], queryField: "blogsByDate") 
-  @key(name: "fetchBlogByID", fields: ["id"], queryField: "fetchBlogByID") {
+  @key(name: "fetchBlogByID", fields: ["id"], queryField: "fetchBlogByID")
+  @key(name: "fetchBlogsByProduction", fields: ["production", "createdAt"], queryField: "fetchBlogsByProduction") {
   id: ID!
   type: String!
   category: String!
+  production: String!
   name: String!
   content: String!
   image: String!
+  embeddedImages: [String!]!
   createdAt: AWSDateTime!
 }
 

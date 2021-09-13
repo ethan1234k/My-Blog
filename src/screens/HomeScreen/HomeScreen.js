@@ -7,7 +7,7 @@ import { useHistory } from "react-router";
 import BlogThumbnail from "../../components/BlogThumbnail/BlogThumbnail";
 import { useSelector } from "react-redux";
 import { API } from "aws-amplify";
-import { listBlogsWithThumbnailContentOnly } from "../../graphql/custom-queries";
+import { fetchProductionReadyBlogThumbnailContent } from "../../graphql/custom-queries";
 
 const HomeScreen = () => {
   let history = useHistory();
@@ -23,10 +23,10 @@ const HomeScreen = () => {
 
   async function fetchBlogs() {
     const apiData = await API.graphql({
-      query: listBlogsWithThumbnailContentOnly,
-      variables: { type: "Blog", limit: 2, sortDirection: "DESC" },
+      query: fetchProductionReadyBlogThumbnailContent,
+      variables: { production: "Ready", limit: 2, sortDirection: "DESC" },
     }).catch((e) => console.log(e));
-    let latestTwoBlogsArray = apiData.data.blogsByDate.items;
+    let latestTwoBlogsArray = apiData.data.fetchBlogsByProduction.items;
     setLatestBlog(latestTwoBlogsArray[0]);
     setSecondLatestBlog(latestTwoBlogsArray[1]);
     if (

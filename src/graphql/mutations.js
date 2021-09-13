@@ -10,9 +10,11 @@ export const createBlog = /* GraphQL */ `
       id
       type
       category
+      production
       name
       content
       image
+      embeddedImages
       createdAt
       updatedAt
     }
@@ -27,9 +29,11 @@ export const updateBlog = /* GraphQL */ `
       id
       type
       category
+      production
       name
       content
       image
+      embeddedImages
       createdAt
       updatedAt
     }
@@ -44,9 +48,11 @@ export const deleteBlog = /* GraphQL */ `
       id
       type
       category
+      production
       name
       content
       image
+      embeddedImages
       createdAt
       updatedAt
     }

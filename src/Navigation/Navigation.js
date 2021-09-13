@@ -25,24 +25,6 @@ const Navigation = () => {
       <Route exact path="/add-blog/t15oiBpw097KtQa/26kAggM">
         <NewBlogScreen />
       </Route>
-      {/* <Route exact path="/">
-        <LandingPage />
-      </Route>
-      <Route path={"/about"}>
-        <LandingPageAbout />
-      </Route>
-      <Route path={"/FAQ"}>
-        <LandingPageFAQ />
-      </Route>
-      <Route exact path={'/blog'}>
-        <LandingPageBlog />
-      </Route>
-      <Route path={"/blog/article"}>
-        <BlogArticleScreen />
-      </Route>
-      <Route path={"/waitlist"}>
-        <JoinWaitlistScreen />
-      </Route> */}
     </Router>
   );
 };

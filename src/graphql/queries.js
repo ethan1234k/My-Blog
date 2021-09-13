@@ -7,9 +7,11 @@ export const getBlog = /* GraphQL */ `
       id
       type
       category
+      production
       name
       content
       image
+      embeddedImages
       createdAt
       updatedAt
     }
@@ -26,9 +28,11 @@ export const listBlogs = /* GraphQL */ `
         id
         type
         category
+        production
         name
         content
         image
+        embeddedImages
         createdAt
         updatedAt
       }
@@ -57,9 +61,11 @@ export const blogsByDate = /* GraphQL */ `
         id
         type
         category
+        production
         name
         content
         image
+        embeddedImages
         createdAt
         updatedAt
       }
@@ -86,9 +92,44 @@ export const fetchBlogByID = /* GraphQL */ `
         id
         type
         category
+        production
         name
         content
         image
+        embeddedImages
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
+export const fetchBlogsByProduction = /* GraphQL */ `
+  query FetchBlogsByProduction(
+    $production: String
+    $createdAt: ModelStringKeyConditionInput
+    $sortDirection: ModelSortDirection
+    $filter: ModelBlogFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    fetchBlogsByProduction(
+      production: $production
+      createdAt: $createdAt
+      sortDirection: $sortDirection
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        type
+        category
+        production
+        name
+        content
+        image
+        embeddedImages
         createdAt
         updatedAt
       }
