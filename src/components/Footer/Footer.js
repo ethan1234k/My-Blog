@@ -28,6 +28,14 @@ const Footer = () => {
           >
             Blog
           </p>
+          <p
+            onClick={() => {
+              history.push("/privacy");
+              window.scrollTo(0, 0);
+            }}
+          >
+            Privacy Policy
+          </p>
         </div>
       </div>
       <div className="footerRightContentContainer">

@@ -29,6 +29,8 @@ const Header = () => {
       <div className={click ? 'headerRightTabsContainer active' : 'headerRightTabsContainer'}>
         <p onClick={() => {history.push('/'); window.scrollTo(0, 0)}}>Home</p>
         <p onClick={() => {history.push('/blog'); window.scrollTo(0, 0)}}>Blog</p>
+        <p onClick={() => {history.push('/privacy'); window.scrollTo(0, 0)}}>Privacy Policy</p>
+
         {/* <p onClick={() => {history.push('/contact'); window.scrollTo(0, 0)}}>Contact</p> */}
         {/* <button type="text" className="headerButton">
           Contact Us

@@ -28,12 +28,6 @@ const BlogScreen = () => {
     setBlogDisplay2DArray(tempArray);
   }
 
-  //Listens for updates in the blogsArray from redux store
-  // useEffect(() => {
-  //   let tempArray = splitArray(state.blogsArray, 3);
-  //   setBlogDisplay2DArray(tempArray);
-  // }, [state.blogsArray]);
-
   //Turns an array into a 2D array with part being the length of the x dimension array
   function splitArray(array, part) {
     var tmp = [];
@@ -42,20 +36,6 @@ const BlogScreen = () => {
     }
     return tmp;
   }
-
-  //Button that can add a new blog
-  {
-    /* <button
-        onClick={() => {
-          // dispatch({ type: "Set Blog Array" , array: "Testing Title" });
-          setAddBlogModalOpen(true);
-          setAddBlogModalRefresh(!addBlogModalRefresh);
-        }}
-      >
-        Add Listing
-      </button> */
-  }
-  //Button that can add a new blog
 
   return (
     <div className="blogScreenContainer">

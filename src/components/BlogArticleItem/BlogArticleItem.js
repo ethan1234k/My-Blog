@@ -29,6 +29,7 @@ const BlogArticleItem = () => {
       renderMainBlogImage(blogData.image);
       renderEmbeddedImages(blogData.embeddedImages);
       determineDisplayDate(blogData.createdAt);
+      console.log(blogData.content)
     }
   }
 

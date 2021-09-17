@@ -6,6 +6,7 @@ import HomeScreen from '../screens/HomeScreen/HomeScreen';
 import SingleArticleScreen from '../screens/SingleArticleScreen/SingleArticleScreen';
 import NewBlogScreen from '../screens/NewBlogScreen/NewBlogScreen';
 import ContactUsScreen from '../screens/ContactUsScreen/ContactUsScreen';
+import PrivacyScreen from '../screens/PrivacyScreen/PrivacyScreen';
 
 const Navigation = () => {
   return (
@@ -13,11 +14,14 @@ const Navigation = () => {
       <Route exact path="/">
         <HomeScreen />
       </Route>
-      <Route  exact path="/blog">
+      <Route exact path="/blog">
         <BlogScreen />
       </Route>
-      <Route  exact path="/contact">
+      <Route exact path="/contact">
         <ContactUsScreen />
+      </Route>
+      <Route exact path="/privacy">
+        <PrivacyScreen />
       </Route>
       <Route path="/blog/article/">
         <SingleArticleScreen />
